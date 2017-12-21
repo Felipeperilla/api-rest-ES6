@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 
 const app = express()
 
-const movieRoutes = require('./routes/movies')
+const movieRoutes = require('./routes/movie')
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/cine',{

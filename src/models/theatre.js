@@ -1,10 +1,13 @@
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
-const theatre = new Schema({
-    headquarters: String,
+const theatreSchema = new Schema({
+    name: String,
     location: string,
     movies: [{
-        type: Ob
+        type: Schema.Types.ObjectId,
+        ref: 'movie'
     }]
 })
+
+module.exports = mongoose.model('theatre', theatreSchema)
