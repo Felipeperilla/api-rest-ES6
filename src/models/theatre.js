@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 const theatreSchema = new Schema({
     name: String,
-    location: string,
+    location: String,
     movies: [{
         type: Schema.Types.ObjectId,
         ref: 'movie'

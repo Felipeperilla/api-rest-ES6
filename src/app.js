@@ -6,6 +6,7 @@ const mongoose = require('mongoose')
 const app = express()
 
 const movieRoutes = require('./routes/movie')
+const theatreRoutes = require('./routes/theatre')
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/cine',{
@@ -24,3 +25,4 @@ app.use(morgan('dev'))
 app.use(bodyParser.json())
 
 app.use('/movies',movieRoutes)
+app.use('/theatre',theatreRoutes)

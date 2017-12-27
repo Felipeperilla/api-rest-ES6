@@ -6,11 +6,10 @@ const movieSchema = new Schema({
     autor : String,
     date_initial : Date,
     language: String,
-    theatres: [{
+    theatre: {
         type: Schema.Types.ObjectId,
-        ref: 'theatre',
-        
-    }]
+        ref: 'theatre'        
+    }
 });
 
 module.exports = mongoose.model('movie', movieSchema)
